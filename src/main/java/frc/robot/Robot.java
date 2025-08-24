@@ -5,6 +5,8 @@
 package frc.robot;
 
 
+import java.io.IOException;
+
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -30,12 +32,12 @@ public class Robot extends TimedRobot {
   public void robotInit(){
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
-    // try {
-    //   m_robotContainer = new RobotContainer();
-    // } catch (IOException | ParseException e) {
-    //   // If this triggers it means for some reason is didn't read the swerve files right
-    //   e.printStackTrace();
-    // }
+    try {
+      m_robotContainer = new RobotContainer();
+    } catch (IOException e) {
+      // If this triggers it means for some reason is didn't read the swerve files right
+      e.printStackTrace();
+    }
   }
 
   /**
