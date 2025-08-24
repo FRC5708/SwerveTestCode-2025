@@ -7,7 +7,6 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.subsystems.DriveSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 
-import org.json.simple.parser.ParseException;
 import java.io.IOException;
 
 import frc.robot.Constants.Operator;
@@ -18,7 +17,7 @@ public class RobotContainer {
   // SensorSubsystem m_sensor;
   SendableChooser<Command> autoChooser;
 
-  public RobotContainer() throws IOException, ParseException {
+  public RobotContainer() throws IOException {
     m_drive = new DriveSubsystem();
   
     m_drive.setDefaultCommand(
